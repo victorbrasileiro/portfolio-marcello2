@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400&family=Creepster&family=Poppins:wght@400;500;700&family=Quantico:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+}
+
+html {
+    scroll-behavior: smooth; /*Deixa o scroll mais suave*/
+    font-size: 10px;
+}
+
+body {
+    font-family:'Poppins' sans-serif;
+}
+
+#pessoal {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-pessoal {
+    height: 70%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: blue;
+    font-size: 20px;
+}
+
+.digitando::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 1s infinite;
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
