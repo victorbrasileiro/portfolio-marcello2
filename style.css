@@ -59,6 +59,9 @@ body {
     }
 }
 
+/*Utilizando o atalho: Shift + Alt + seta pra baixo, é possivel copiar e colar de forma mais pratica*/
+/*a função nth-child é possivel criar uma animação que é capaz de inserir um elemento por vez em um bloco de codigo.*/
+/*Tentar fazer isso na animaão da digitação*/
 .conteudo-pessoal div h1:nth-child(1) {
     animation-delay: 1s;
 }
