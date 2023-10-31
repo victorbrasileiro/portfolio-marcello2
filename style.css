@@ -10,7 +10,10 @@
 :root {
     --cor-primaria: #fff;
     --cor-secundaria: #000;
-    --cor-terciaria: #ecb;
+    --cor-terciaria: rgb(255, 119, 51);
+    --cor-quartenaria: #00f7ff;
+
+    --fonte-primaria: 'Poppins', sans-serif; 
 }
 
 html {
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-    font-family:'Poppins' sans-serif;
+    font-family: var(--fonte-primaria);
 }
 
 #pessoal {
@@ -48,12 +51,12 @@ body {
     animation: titulo_escrito .5s ease forwards; /* forwards não vai permanecer na transição. vai ficar no estado final da animação */
 }
 
-
+/*Ele começa transparente e quando a animação termina e ele conclui
+100% do carregamento dela, ela fica branca*/
 @keyframes titulo_escrito {
     100% {
-        color: var(--cor-primaria);
+        color: var(--cor-primaria); 
     }
-    
 }
 
 .digitando::after {
