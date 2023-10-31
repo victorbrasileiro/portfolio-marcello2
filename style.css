@@ -51,14 +51,6 @@ body {
     animation: titulo_escrito .5s ease forwards; /* forwards não vai permanecer na transição. vai ficar no estado final da animação */
 }
 
-/*Ele começa transparente e quando a animação termina e ele conclui
-100% do carregamento dela, ela fica branca*/
-@keyframes titulo_escrito {
-    100% {
-        color: var(--cor-primaria); 
-    }
-}
-
 /*Utilizando o atalho: Shift + Alt + seta pra baixo, é possivel copiar e colar de forma mais pratica*/
 /*a função nth-child é possivel criar uma animação que é capaz de inserir um elemento por vez em um bloco de codigo.*/
 /*Tentar fazer isso na animaão da digitação*/
@@ -69,7 +61,21 @@ body {
     animation-delay: 2s;
 }
 .conteudo-pessoal div h1:nth-child(3) {
+    animation: titulo_escrito_nome .5 ease forwards;
     animation-delay: 3s;
+}
+
+/*Ele começa transparente e quando a animação termina e ele conclui
+100% do carregamento dela, ela fica branca*/
+@keyframes titulo_escrito {
+    100% {
+        color: var(--cor-primaria); 
+    }
+}
+@keyframes titulo_escrito_nome {
+    100% {
+        color: var(--cor-terciaria); 
+    }
 }
 
 
