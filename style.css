@@ -89,9 +89,13 @@ body {
     animation-delay: 2.5s;
 }
 
+.nome-pessoal {
+    margin-top: 11rem;
+}
+
 .conteudo-ferramentas {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     margin-top: 6rem; 
@@ -103,9 +107,17 @@ body {
     margin-left: 20px;
 }
 
+.ferramentas {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
 .ferramentas ul li {
     display: flex;
     align-items: center;
+    position: relative;
     margin: 10px;
     padding: 10px;
     list-style: none;
