@@ -111,7 +111,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-
 }
 
 .ferramentas ul li {
@@ -132,6 +131,37 @@ body {
 .ferramentas ul li div img:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.ferramentas ul li div:hover::after {
+    content: attr(data); /* referenciar atributo html */
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    color: var(--cor-primaria);
+}
+
+.plano-de-fundo {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(assets/plano-de-fundo5.jpg);
+}
+
+.foto-perfil img {
+    width: 30vh;
+    height: 100%;
+}
+
+.links img {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
 }
 
 /*Ele começa transparente e quando a animação termina e ele conclui
