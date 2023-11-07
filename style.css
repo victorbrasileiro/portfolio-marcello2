@@ -151,6 +151,19 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url(assets/plano-de-fundo5.jpg);
+    background-size: cover; /*vai ajustar conforme o espaço*/
+    background-position: top center;
+    position: relative;
+}
+
+.plano-de-fundo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #3333;
 }
 
 .foto-perfil img {
