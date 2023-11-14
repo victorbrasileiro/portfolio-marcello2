@@ -32,3 +32,19 @@ document.addEventListener('DOMContentLoaded', function () {
     restartAnimation();
   });
   
+  function copiarTexto() {
+    var elemento = document.querySelector("#copia");
+
+    var range = document.createRange();
+    range.selectNode(elemento);
+
+    // Seleciona o texto
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+
+    // Deseleciona o texto
+    window.getSelection().removeAllRanges();
+
+    // Exibe uma mensagem (opcional)
+    alert("Texto copiado com sucesso!");
+}
