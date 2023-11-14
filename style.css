@@ -13,6 +13,7 @@
     --cor-secundaria: #212121;
     --cor-terciaria: #0074E0;
     --cor-quartenaria: #8fbe00;
+    --cor-aqua: #c0efd2;
     --cor-plano-de-fundo: #ff4242;
 
     --fonte-primaria: 'Poppins', sans-serif; 
@@ -249,6 +250,7 @@ body {
 }
 
 .sobre2 {
+    /* animation: inicializar .30s ease forwards; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -256,16 +258,38 @@ body {
     padding: 3rem;
 }
 
-.subtitulo h2 p {
+.subtitulo h2 {
     display: inline-block;
     font-size: 2.5rem;
+    padding: 3px 5px;
 }
 
-.subtitulo h2 p:nth-child(2) span {
+/* .subtitulo h2 .digitando:nth-child(2) span {
     padding: 3px 5px;
     border-radius: 4px;
     color: var(--cor-preta);
     background: var(--cor-primaria);
+} */
+
+/* .digitando::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 1s infinite;
+} */
+
+.digitando {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--cor-primaria); /* Efeito de cursor piscando */
+}
+  
+.digitando {
+    display: inline-block;
+    color: var(--cor-aqua);
+    margin: 0;
+    padding: 10px;
+    animation: typing 3s steps(90) infinite, blink-caret .1s step-end infinite;
 }
 
 .sobre2 h3 {
@@ -322,6 +346,194 @@ body {
     /* transition: all 2s ease; */
     filter: brightness(.8); 
 }
+
+/*final da segunda página*/
+
+#projetos {
+    height: 100vh;
+    width: 100%;
+    background: var(--cor-preta);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-projetos h2 {
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--cor-primaria);
+}
+
+.projetos-div {
+    display: flex;
+    margin-top: 2rem;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cards-projetos {
+    width: 320px;
+    height: 450px;
+    padding: 30px 20px 20px;
+    margin: 0px 10px;
+    background: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+}
+
+.cards-projetos::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background: var(--cor-quartenaria);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.conteudo-projetos {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.imagens-projeto {
+    height: 240px;
+    width: 250px;
+    overflow: hidden; /* vai tratar as imagens que transbordam o espaço */
+    border-radius: 30px;
+    position: relative;
+    border: 4px solid var(--cor-quartenaria);
+    margin: 0 auto;
+}
+
+.imagens-projeto  a img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover; /*vai ocupar somente onde é pra ocupar*/
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    border: 2px solid var(--cor-primaria);
+    cursor: pointer;
+}
+
+.imagens-projeto img:hover {    
+    transition: transform .3s ease-out;
+    transform: scale(1.1);
+}
+
+.conteudo-projetos span {
+    color: var(--cor-preta);
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: .75rem auto .5rem auto;
+}
+
+.conteudo-projetos p {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0rem .75rem;
+}
+
+.links-projetos {
+    width: 200px;
+    margin: auto auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-projetos a {
+    padding: 5px 16px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    background: var(--cor-quartenaria);
+    border-radius: 15px;
+    transition: opacity .3s ease;
+}
+
+.links-projetos a:hover {
+    opacity: .7;
+}
+
+/* final estilização projetos */
+
+#pagina-contato {
+    height: 100vh;
+    width: 100%;
+    background: var(--cor-preta);
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario h2 {
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--cor-primaria);
+}
+
+.formulario h2 span {
+    color: var(--cor-plano-de-fundo);
+}
+
+.formulario form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario form input, form textarea {
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    color: var(--cor-primaria);
+    border-radius: 15px;
+}
+
+.formulario form textarea {
+    resize: none;
+    max-height: 250px;
+}
+
+.botao-enviar {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.botao-enviar:hover {
+    transform: scale(1.04);
+}
+
+.formulario .botao-enviar input {
+    width: 120px;
+    background-color: var(--cor-plano-de-fundo);
+    font-weight: 700;
+    color: var(--cor-preta);
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+
 /*Ele começa transparente e quando a animação termina e ele conclui
 100% do carregamento dela, ela fica branca*/
 @keyframes titulo_escrito {
@@ -345,15 +557,6 @@ body {
         left: 100%;
     }
 }
-
-
-/* .digitando::after {
-    content: '|';
-    margin-left: 5px;
-    opacity: 1;
-    animation: pisca 1s infinite;
-}
-
 @keyframes pisca {
     from {
         opacity: 1;
@@ -363,7 +566,6 @@ body {
         opacity: 0;
     }
 }
-
 @keyframes inicializar {
     from {
         opacity: 0;
@@ -374,4 +576,20 @@ body {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
-} */
+}
+@keyframes typing {
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 50%; 
+    }
+}
+@keyframes blink-caret {
+    from, to { 
+        border-color: transparent; border-width: 5px; 
+    }
+    50% { 
+        border-color: var(--cor-preta); border-width: 0.5px; 
+    }
+}
