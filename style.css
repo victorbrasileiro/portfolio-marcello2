@@ -8,10 +8,12 @@
 }
 
 :root {
+    --cor-preta: #000;
     --cor-primaria: #f7f6e4;
-    --cor-secundaria: #000;
-    --cor-terciaria: #00a8c6;
+    --cor-secundaria: #212121;
+    --cor-terciaria: #0074E0;
     --cor-quartenaria: #8fbe00;
+    --cor-plano-de-fundo: #ff4242;
 
     --fonte-primaria: 'Poppins', sans-serif; 
 }
@@ -30,7 +32,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-preta);
 }
 
 .conteudo-pessoal {
@@ -41,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 10px;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-preta);
 }
 
 .conteudo-pessoal div h1 {
@@ -78,6 +80,7 @@ body {
     animation: titulo_escrito_caixa 1s ease;
     animation-delay: .5s;
 }
+
 
 /*Esses blocos vao definir um tempo para que as animações sejam implementadasS*/
 .conteudo-pessoal div h1:nth-child(1) span{
@@ -151,7 +154,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(assets/plano-de-fundo5.jpg);
+    background-image: url(assets/plano-de-fundo2.jpg);
     background-size: cover; /*vai ajustar conforme o espaço*/
     background-position: top center;
     position: relative;
@@ -167,10 +170,10 @@ body {
     width: 100%;
     opacity: .7;
     z-index: -1; /*está deixando o background pra tras das imagens das redes sociais OBS: ATENÇÃO NA CLASSE ACIMA*/
-    background: 
-        linear-gradient(90deg, transparent 30%, var(--cor-secundaria)), /*efeito degradê no canto da div foto de perfil*/
-        linear-gradient(180deg, transparent 30%, var(--cor-secundaria)),
-        linear-gradient(0deg, transparent 65%, var(--cor-secundaria)); 
+    background:
+        linear-gradient(1turn, transparent 20%, var(--cor-preta)),
+        linear-gradient(.33turn, transparent 20%, var(--cor-preta)),
+        linear-gradient(.57turn, transparent 20%, var(--cor-preta)); 
 }
 
 .foto-perfil {
@@ -183,7 +186,7 @@ body {
 
 .foto-perfil img {
     border-radius: 50%;
-    width: 60%;
+    width: 50%;
 }
 
 .links a img {
@@ -203,7 +206,122 @@ body {
 
 /*final da primeira página*/
 
+#sobre {
+    height: 100vh;
+    width: 100%;
+    background: var(--cor-preta);
+    display: flex;
+    color: var(--cor-primaria);
+}
 
+.plano-de-fundo_sobre {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-sobre {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-sobre::after {
+    content: "";
+    position: absolute; /*para que seja possivel essa propriedade aparecer, ele tem que referenciar o componente pai. que nesse caso é o bloco acima*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:
+        linear-gradient(.25turn, transparent 30%, var(--cor-preta)),
+        linear-gradient(.5turn, transparent 30%, var(--cor-preta)),
+        linear-gradient(.25turn, transparent 30%, var(--cor-preta));
+       
+} 
+
+.img-sobre img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sobre2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
+}
+
+.subtitulo h2 p {
+    display: inline-block;
+    font-size: 2.5rem;
+}
+
+.subtitulo h2 p:nth-child(2) span {
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: var(--cor-preta);
+    background: var(--cor-primaria);
+}
+
+.sobre2 h3 {
+    margin: 3rem;
+    font-size: 1.9rem;
+}
+
+.sobre2 h3 p span {
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: var(--cor-preta);
+    background: var(--cor-quartenaria);
+    width: fit-content;
+}
+
+.sobre2 h4 {
+    margin: .3rem 3rem;
+    font-size: 1.7rem;
+}
+
+.sobre2 h4 p span {
+    color: var(--cor-preta);
+    background: var(--cor-plano-de-fundo);
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-size: bold;
+    font-weight: 700;
+}
+
+.botao-curriculo {
+    display: flex;
+    max-width: 190px;
+    margin: 4rem 3rem;
+}
+
+.botao-curriculo button {
+    display: inline-block;
+    width: 100%;
+    max-width: 172px;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    font: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--cor-primaria);
+    background: var(--cor-terciaria);
+    letter-spacing: .15rem; /*espaçamento entre as letras*/
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botao-curriculo button:hover {
+    /* transition: all 2s ease; */
+    filter: brightness(.8); 
+}
 /*Ele começa transparente e quando a animação termina e ele conclui
 100% do carregamento dela, ela fica branca*/
 @keyframes titulo_escrito {
