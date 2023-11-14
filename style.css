@@ -531,8 +531,47 @@ body {
     cursor: pointer;
     transition: .2s;
 }
+/* final estilização fale comigo */
 
+#section-contatos {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-preta);
+    padding: 50px 50px;
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 17px;
+}
 
+.contatos-div h1 {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 60%;
+}
+
+.contatos-div h1 span {
+    color: var(--cor-terciaria);
+}
+
+.contatos-div table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+.contatos-div table, th, td {
+    border: 1px solid var(--cor-terciaria);
+    padding: 10px;
+    text-align: center;
+
+}
+
+#copia button {
+    width: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /*Ele começa transparente e quando a animação termina e ele conclui
 100% do carregamento dela, ela fica branca*/
