@@ -8,6 +8,21 @@
     <title>Portfolio - Marcello Victor</title>
 </head>
 <body>
+    <section id="cabeçalho">
+        <a class="cabeçalho-titulo" href="">
+            <h1>MVBS</h1>
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#pessoal">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#pagina-contato">Fala comigo</a></li>
+                <li><a href="#section-contatos">Contatos</a></li>
+            </ul>
+        </nav>
+    </section>
     <!-- section principal -->
      <section id="pessoal">
         <div class="conteudo-pessoal">
@@ -39,20 +54,6 @@
                         <li>
                             <div data="JS">
                                 <img src="assets/js.svg" alt="icone JavaScript">
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <div data="NODE">
-                                <img src="assets/node.svg" alt="icone do NODE JS">
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <div data="REACT">
-                                <img src="assets/react.svg" alt="icone do REACT">
                             </div>
                         </li>
                     </ul>
@@ -106,7 +107,9 @@
             </h4>
             
             <div class="botao-curriculo">
-                <button>Currículo</button>
+                <a href="" download="CV Marcello"a aria-label="Baixar curriculo Marcello">
+                    Curriculo
+                </a>
             </div>
         </div>
      </section>
@@ -121,21 +124,24 @@
             <div class="cards-projetos">
                 <div class="conteudo-projetos">
                     <div class="imagens-projeto">
-                        <a href="">
-                            <img src="assets/wp4069727-donald-duck-wallpapers.jpg" alt="">
+                        <a href="https://meu-primeiro-portfolio-gilt.vercel.app/" target="_blank">
+                            <img src="assets/howard-the-duck-iphone-12-pro-max.jpg" alt="O pato um tanto quanto suspeito">
                         </a>
                     </div>
 
-                    <span>Conversor de moedas</span>
+                    <span>Meu primeiro portfolio</span>
 
-                    <p>Esse projeto simula um conversor de moedas</p>
+                    <p>É um projeto bem simples contendo apenas HTML e CSS.
+                        Foi meu primeiro contato com programção Web e curti muito.
+                        Desenvolvi acompanhando as vídeo-aulas da plataforma Alura.
+                    </p>
 
                     <div class="links-projetos">
-                        <a href="" target="_blank">
+                        <a href="https://github.com/victorbrasileiro/meu-primeiro-portfolio" target="_blank">
                             Codigo 
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="" target="_blank">
+                        <a href="https://meu-primeiro-portfolio-gilt.vercel.app/" target="_blank">
                             Site 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -146,21 +152,22 @@
             <div class="cards-projetos">
                 <div class="conteudo-projetos">
                     <div class="imagens-projeto">
-                        <a href="">
-                            <img src="assets/plano-de-fundo3.jpg" alt="">
+                        <a href="https://freeway-two.vercel.app/" target="_blank">
+                            <img src="assets/pato-caminando.gif" alt="Um pato caminhando">
                         </a>
                     </div>
 
-                    <span>Conversor de moedas</span>
+                    <span>Jogo Freeway</span>
 
-                    <p>Esse projeto simula um conversor de moedas</p>
+                    <p>Esse projeto foi muito animador pois eu queria desenvolver um joguinho para meu 
+                    sobrinho. Foi desenvolvido em JavaScript e o fiz tendo contato com listas.</p>
 
                     <div class="links-projetos">
-                        <a href="" target="_blank">
+                        <a href="https://github.com/victorbrasileiro/freeway" target="_blank">
                             Codigo 
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="" target="_blank">
+                        <a href="https://freeway-two.vercel.app/" target="_blank">
                             Site 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -171,21 +178,23 @@
             <div class="cards-projetos">
                 <div class="conteudo-projetos">
                     <div class="imagens-projeto">
-                        <a href="">
-                            <img src="assets/howard-the-duck-iphone-12-pro-max.jpg" alt="">
+                        <a href="https://pingpong-gilt.vercel.app/">
+                            <img src="assets/ping-pong-cute.gif" alt="Um gatinho jogando ping pong">
                         </a>
                     </div>
 
-                    <span>Conversor de moedas</span>
+                    <span>Pong</span>
 
-                    <p>Esse projeto simula um conversor de moedas</p>
+                    <p>Esse projeto foi para praticar lógica de programação de forma descontraída.
+                    É um jogo popular chamado Pong. E ele foi feito na linguagem JavaScript praticando funções.    
+                    </p>
 
                     <div class="links-projetos">
-                        <a href="" target="_blank">
+                        <a href="https://github.com/victorbrasileiro/pingpong" target="_blank">
                             Codigo 
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="" target="_blank">
+                        <a href="https://pingpong-gilt.vercel.app/" target="_blank">
                             Site 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -234,6 +243,14 @@
         </div>
 
      </section>
+     <footer class="rodape">
+        <div class="container__rodape">
+            <p class="conteudo__rodape">® 2023 Systems Developer, Marcello Victor Brasileiro da Silva.</p>
+        </div>
+        <div class="container__rodape">
+            <p class="conteudo__rodape">Um sistema sujeito a atualizações e inovações e conteúdos novos à medida que o administrador for aprendendo coisas novas. Porto Velho - RO. CEP: 76820-776 - Embratel. </p>
+        </div>
+    </footer>
      <script src="script.js"></script>
 </body>
 </html>
